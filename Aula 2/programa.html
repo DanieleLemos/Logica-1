@@ -1,0 +1,108 @@
+<meta charset="UTF-8"> <!-- charset é um tributo para acentuação, mas o google chrome já reconhece varios idomas e gramatica -->
+
+<script> // tudo que é escrito dentro da tag script é no mundo java 
+
+	alert (" A idade da Daniele é"); // o termo alert precisa receber um paramentro, o que ele vai mostrar
+	alert("29"); // não é legal criar vários alert, pois o usúario pode achar tendencioso e ficar muito ruim
+
+</script>
+
+<! -- tudo fora do script é no mundo HTML -->
+
+<! -- introduzindo o HTML no Java -->
+<script> 
+
+	document.write ("A idade da Daniele é "); // o document.write é pra inserir o HTML dentro do Java. Tudo que ficar dentro do (""); é no mundo HTML 
+	document.write ("29"); // sempre quando esta entre ("") é uma string = texto 
+
+</script> 
+<br>
+
+<! -- uma alternativa de escrita para criar linhas -->
+<script>
+
+	document.write("A idade da Daniele é <br> 29"); // o <br> serve para pular linha dentro do mundo HTML
+
+</script>
+<br>
+
+<! -- outra alternativa para criar linhas -->
+<script> // Java é uma lingua dinamica, permitindo escrever mais e de forma dinamica 
+
+	document.write("A idade da Daniele é ");
+	document.write("<br>");
+	document.write("29");
+
+</script> <! -- na programação existem varias formas de se atingir o mesmo objetivo, algumas menos verbosas (que se escreve mais) ou mais diretas (que se escreve menos, mais simples), quem vai ditar isso é o problema que vamos resolver -->
+<br>
+
+<! -- 1º exemplo de problema com textos e numeros -->
+<script>
+
+	document.write("A idade da Daniele é "); // isto é um texto por estar entre ("")
+	document.write(29); // no java ele identifica os numeros sem estar entre ("")
+
+</script>
+<br>
+
+<! -- 2º exemplo de problema com textos e operações numericas -->
+<script>
+
+	document.write("A idade da Daniele é "); 
+	document.write(20 + 9); // no java ele reconhece operações numericas como subtrair, somar e etc...
+
+</script>  
+<br>
+
+<! -- 3º exemplo de problema com concatenação = juntar um texto (numerico) com outro texto (frases) com um sinal de + -->
+<script>
+
+	document.write("A idade da Daniele é ");
+	document.write("20"+"9"); // isso é uma concatenação, significa que ele juntou um texto ao outro, o que resultou em 209
+
+</script>
+<br>
+
+<! -- 4º exemplo de problema com texto e numero no mesmo write -->
+<script type="text/javascript">
+
+	document.write("A idade da Daniele é ");
+	document.write("20"+ 9); // quando há um texto e um numero o java entende que tudo é texto ao invés de dar erro 
+
+</script>
+<br>
+
+<! -- Exemplos de opeçãoes com textos e numeros -->
+<! -- 1º exemplo = data de nascimento -->
+<script> // é necessário que seja criado duas caixas de dialogos pois sempre quando ta entre "" o java considera tudo como texto
+
+	document.write("O ano de nascimento de Daniele é ");
+	document.write(2023 - 30); 
+
+</script>
+<br>
+
+<! -- 2º exemplo = média aritmetica -->
+<script>
+
+	document.write("A média das idades é ");
+	document.write((29+31+64)/3); // operaçãoes na programação são iguais a da matematica basica
+
+</script>
+<br>
+
+<!-- 3º exemplo = juntando frases com operações numericas -->
+<script>
+	document.write("Daniele nasceu em " + (2023-30)); // para q não haja concatenação entre texto e numeros é necessário que acha ()
+	document.write("<br>");
+	document.write("Phillipe nasceu em " + (2023 -31));
+	document.write("<br>");
+	document.write("Regina nasceu em " + (2023 - 65) + "<br>"); // uma forma de escrita para que haja linhas pode ser concatenar o <br> entre ""
+
+</script>
+
+
+
+<script>
+    document.write("<h1>Seja bem-vindo</h1>");
+</script>

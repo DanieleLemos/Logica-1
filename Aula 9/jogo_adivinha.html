@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+
+<script>
+	
+	function puloLinha() {
+ 		 document.write("<br><br>"); 
+ 	}
+ 	function mostra(frase) {
+ 		document.write("# " + frase + "#"); 
+ 		puloLinha();
+ 	}
+	
+//	var numeroPensado = 5; numero pensado sem dinamica; 
+
+ /*	var numeroPensado = Math.round(Math.random()*100);
+	var chute = parseInt(prompt("Digite seu chute"));
+
+	if (chute == numeroPensado) {
+		mostra("<big>VOCÊ ACERTOU</big>")
+	} else {
+		mostra ("Você errou, o numero pensado foi " + numeroPensado);
+	} */ // exercicio da aula 
+
+	function sorteia(n) {
+	 	return Math.round(Math.random() * n);
+	 } 
+
+	var numeroPensado = sorteia(10);
+	var chute = parseInt(prompt("Digite seu chute."));
+
+	if (chute == numeroPensado) {
+		mostra("Você acertouuu!!!")
+	} else {
+		if (chute > numeroPensado) {
+			mostra("Você não acertou :(. Seu numero era maior que o que pensei.");
+		} else {
+			mostra("Você não acertou :(. Seu numero era menor do que eu pensei");
+		}
+		
+	}
+
+</script>
+

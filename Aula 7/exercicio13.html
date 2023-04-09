@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<! -- ACUMULANDO VALORES -->
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+    var totalEventos = parseInt(prompt("Qual foi a quantidade de eventos no mês?"));
+    var contador = 1;
+    var totalGastos = 0;
+
+    while   (contador <= totalEventos){
+        var gastos= parseInt(prompt("Informe o gasto"));
+        totalGastos = totalGastos + gastos;
+        contador++;
+    }
+
+    var mediaGastos = totalGastos/ totalEventos;
+    mostra ("A média dos gastos esse mês é: " + mediaGastos);
+
+</script>

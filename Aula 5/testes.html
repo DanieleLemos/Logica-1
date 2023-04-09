@@ -1,0 +1,78 @@
+<meta charset="utf-8">
+
+<script>
+	
+	function pulaLinha () {
+		document.write("<b>");
+		
+	}
+
+	function mostra (frase) {
+		document.write ("################" + frase + "#####################");
+		pulaLinha();
+		
+	}
+
+	function calculaArea(base, altura) {
+		return area = (base * altura)/ 2
+	}
+
+	var calculaArea = calculaArea(20, 80)
+
+	
+	mostra ("O valor da área é: " + calculaArea);
+
+
+</script>
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numero1 = prompt("Digite o primeiro número");
+    var numero2 = prompt("Digite o segundo número");
+
+    mostra("O valor de " + numero1 + " vezes " + numero2 + " é: " + (numero1 * numero2));
+
+</script>
+
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function a(texto) {
+
+        return "(" + texto + ")";
+    }
+
+    function b(texto) {
+
+        return "@" + texto + "@";
+    }
+
+    function c(nome, sobrenome) {
+
+        return b(nome + " " + a(sobrenome));
+
+    }
+
+    var resultado = c("Daniele", "Lemos");
+
+    mostra(resultado);
+
+</script>

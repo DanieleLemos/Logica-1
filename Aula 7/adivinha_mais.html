@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<! -- CAMPO DE TEXTO E BOTÃO / Uma forma para que não seja usado o prompt sempre --> 
+
+<! -- Contudo, o HTML é uma linguagem estática, tanto o input quanto o button são exibidos e nada acontece. -->
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+	
+	var segredo = Math.round(Math.random()*10); 
+	// variavel pode ter qualquer nome, mas no selector tem que ser o mesmo nome da tag desejada 
+	var input = document.querySelector("input"); 
+	input.focus();
+
+// a função serve para que a caixa de alerta abra apos digitar um numero. Este teste é para que seja feito apos digitar meu numero,sem ser 
+
+	function verifica () {
+		if (input.value == segredo) {
+			alert("Você ACERTOU!");
+		} else {
+			alert ("Você ERROU!!!");
+		}
+		input.value = ""; // serve para quando errar o segredo o programa permitir que seja inserido outro numero até acertar.
+		input.focus(); // serve para a caixa de dialogo já ficar em foco assim que precisar escrever algo novamente; 
+
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = verifica; // o onclick serve para chamar o que está dentro da função, é necessario que o verifica seja sem o (), pois caso contrario o console ira traduzir que queremos apenas que a função seja feita e não pra eu clicar no botão criado. OU seja tudo que esta dentro do verifica() ira para dentro do onclick. 
+
+</script>

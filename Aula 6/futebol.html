@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+<! -- convertendo texto em números --> 
+<script> 
+ /* 
+ 	exemplo de erro com textos e numeros 
+
+	function pulaLinha () {
+		document.write("<br><br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha()
+	}
+
+	var vitorias = prompt("Entre com o numero de vitórias") //toda função abre e fecha () e é sempre um TEXTO
+	var empates = prompt("Entre com o numero de empates"); 
+
+	var pontos = vitorias * 3 + empates; // o retorno da função prompt() é sempre string ao utilizar o operador + é aplicado uma concatenação.
+	mostra ("Os pontos do seu time é: " + pontos);
+	*/
+
+// exemplo de como converter textos em numeros = usando parseInt 
+
+	function pulaLinha () {
+		document.write("<br><br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha()
+	}
+
+	var vitorias = parseInt(prompt("Entre com o numero de vitórias")); //toda função abre e fecha () e é sempre um TEXTO
+	var empates = parseInt(prompt("Entre com o numero de empates")); 
+
+	var pontos = vitorias * 3 + empates;
+	mostra ("Os pontos do seu time é: " + pontos);
+
+// Exemplos com condições 
+	if (pontos>28) {
+	mostra("Seu time está melhor do que o ano passado.");
+	}
+
+	if (pontos<28) {
+	mostra("Seu time está pior do que o ano passado.")
+	}
+
+	if (pontos == 28) {
+	mostra("Seu time está igual ao ano passado.");
+	}
+
+	mostra("FIM!")
+</script> 

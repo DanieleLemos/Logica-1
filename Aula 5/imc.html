@@ -1,0 +1,135 @@
+<meta charset="utf-8">
+
+	<script> // criando uma função para varias pessoas diferentes e com 2 parametros 
+
+	function puloLinha() {
+ 		 document.write("<br><br>"); 
+ 	}
+
+ 	function mostra(frase) {
+ 		document.write("################## " + frase + "#################"); 
+ 		puloLinha();
+ 	}
+
+	/* 
+		var pesoDaniele = 50;  
+		var alturaDaniele = 1.59;  
+		var imcDaniele = pesoDaniele /(alturaDaniele*alturaDaniele);
+
+		mostra("O IMC da Daniele é: " + imcDaniele);
+
+		var pesoAmigo = 55;
+		var alturaAmigo = 1.65;
+		var imcAmigo = pesoAmigo / (alturaAmigo*alturaAmigo);
+
+		mostra("O IMC do meu amigo é: " + imcAmigo); CALCULANDO SEM FUNÇÃO calculaImc 
+		*/
+
+	function calculaImc(peso, altura) { // quando quero mais de um paramentro deve-se ter virgula entre elas. 
+ 		var imc = peso / (altura*altura);
+ 		mostra("O IMC calculado é: " + imc);
+ 	}
+
+ 	var pesoDaniele = 50;
+ 	var alturaDaniele = 1.59;
+ 	calculaImc(50, 1.59);
+
+ 	var pesoAmigo = 55;
+ 	var alturaAmigo = 1.65;
+ 	calculaImc(55, 1.65);
+
+// aprendendo sobre retorno de funções 
+
+ 	function calculaImc(peso, altura) {
+
+    	var imc = peso / (altura * altura);
+    	return imc;
+
+	}
+
+	var imcDaniele = calculaImc(50, 1.59);
+	var imcAmigo = calculaImc(55, 1.65);
+	
+
+	mostra("O imc da daniele é: " + imcDaniele);
+	mostra(imcAmigo);
+
+// outra forma de fazer o return pode ser usando a propria operação 	
+
+	function calculaImc(peso, altura) {
+
+  		return peso / (altura * altura);
+
+	} 
+
+	var imcDaniele = calculaImc(50, 1.59);
+	var imcAmigo = calculaImc(55, 1.65);
+	var totalImc = imcDaniele + imcAmigo;
+
+	mostra("O total dos IMC's é: " + totalImc);
+
+	mostra("O total dos imc's é: " + totalImc); 
+
+// usando o prompt (para informações variadas) - interagindo com usuários 
+
+	function calculaImc(peso, altura) {
+
+  		return peso / (altura * altura);
+
+	}
+	var nome = prompt("Informe o seu nome");
+	var alturaInformada = prompt(nome + ", informe sua altura");
+	var pesoInformado = prompt(nome + ", informe seu peso");
+
+	var imc = calculaImc(pesoInformado, alturaInformada);
+
+	mostra(nome + ", o seu IMC calculado é " + imc);
+
+</script> 
+<br>
+
+<script>
+	
+	function puloLinha() {
+ 		 document.write("<br><br>"); 
+ 	}
+ 	function mostra(frase) {
+ 		document.write("# " + frase + "#"); 
+ 		puloLinha();
+ 	}
+	function calculaImc(peso, altura) {
+
+  		return peso / (altura * altura);
+
+	}
+	var nome = prompt("Informe o seu nome");
+	var alturaInformada = prompt(nome + ", informe sua altura");
+	var pesoInformado = prompt(nome + ", informe seu peso");
+
+	var imc = calculaImc(pesoInformado, alturaInformada);
+
+	mostra (nome + ", o seu IMC calculado é " + imc);
+
+	if(imc < 18.5){
+		mostra("Você está abaixo do recomendado.");
+	}
+	if (imc > 35) {
+		mostra("Você está acima do recomendado.");
+    }
+/*	Exemplo muito verboso, escreve muito
+
+	if (imc >= 18.5) {
+		if (imc <= 35){
+			mostra("Seu IMC está excelente");
+		}
+	} 
+*/ 
+
+// exemplo com atalho mais simples 
+
+	if (imc >= 18.5 && imc <= 35){
+		mostra("Seu IMC está excelente"); 
+	}
+
+</script>
+

@@ -1,0 +1,65 @@
+<meta charset="utf-8">
+
+<! -- Criação de var com pular linhas/ aula 4 -->
+
+<script>
+
+	var ano = 2017; // sempre manter a váriavel da mesma forma escrita tudo minusculo O = tem o nome de recebe 
+	var puloLinha = "<br><br><br>" // para mudar em todos os lugares 
+
+	document.write("Daniele tem " + (ano - 1993) + " anos"); // não é string pois não está entre "" e nem um numero
+    document.write(puloLinha);
+    document.write("Phillipe tem " + (ano - 1992) + " anos");
+    document.write(puloLinha);
+    document.write("Regina tem " + (ano - 1958) + " anos");
+    document.write(puloLinha);
+    document.write("<h1> EU ME AMO </h1>" + puloLinha); // Teste na escrita do codigo 
+
+</script>
+<br>
+
+<script type="text/javascript"> // criando uma função (precisa sempre ser uma ação)
+
+ 	function puloLinha() {
+
+ 		 document.write("<br>"); // a função é um atalho para outras instruções que quero executar no programa
+ 	
+ 	} // no java é necessário que toda funcão tenha um argumento/parametro dentro dos (), porém nesse caso não será necessário pois quero apenas pular linha 
+	
+    var ano = 2017;
+	document.write("Daniele tem " + (ano - 1993) + " anos"); 
+
+    puloLinha(); // a função é um comando para document.write(puloLinha)
+
+    document.write("Phillipe tem " + (ano - 1992) + " anos");
+
+    puloLinha();
+
+    document.write("Regina tem " + (ano - 1958) + " anos");
+
+    puloLinha();
+
+</script>
+<br>
+
+<script> // criando funções com parâmetros
+
+	function puloLinha() {
+ 		document.write("<br><br>"); 
+ 	}
+
+ 	function mostra(frase) {
+ 		document.write("################## " + frase + "#################"); // todo argumento tem que ser igual nos dois parenteses? NÃO 
+ 		puloLinha();
+ 	}
+
+	var ano = 2017; 
+
+	mostra("Daniele tem " + (ano - 1993) + " anos"); 
+ 
+    mostra("Phillipe tem " + (ano - 1992) + " anos");
+
+    mostra("Regina tem " + (ano - 1958) + " anos");
+    
+</script>
+
